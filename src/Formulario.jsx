@@ -10,7 +10,7 @@ function Formulario({crearTarea}){
 
                 if(textoTemporal.trim() != ""){
 
-                    let {id,error} = await fetch("http://localhost:4000/tareas/nueva",{
+                    let {id,error} = await fetch("https://api-tareas-mongodb.onrender.com/tareas/nueva",{
                         method : "POST",
                         body : JSON.stringify({tarea : textoTemporal.trim() }),
                         headers : {
